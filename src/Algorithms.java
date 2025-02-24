@@ -12,9 +12,7 @@ public class Algorithms {
             }
         }
 
-        for (int j : array) {
-            System.out.print(j + " ");
-        }
+        printArray(array);
     }
 
     static public void insertionSort(int[] array) {
@@ -31,9 +29,7 @@ public class Algorithms {
         }
 
         // Print sorted array
-        for (int j : array) {
-            System.out.print(j + " ");
-        }
+        printArray(array);
     }
 
 
@@ -46,7 +42,28 @@ public class Algorithms {
         array[index2] = temp;
     }
 
+    public static void shellSort(int[] array) {
+        for (int gap = array.length / 2; gap > 0; gap /= 2) {
 
+            for (int i = gap; i < array.length; i++) {
+                int newElement = array[i];
+                int j = i;
+                while (j >= gap && array[j - gap] > newElement) {
+                    array[j] = array[j - gap];
+                    j -= gap;
+                }
+                array[j] = newElement;
+            }
+        }
 
+        printArray(array);
+
+    }
+
+    static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+    }
 
 }
