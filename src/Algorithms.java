@@ -60,6 +60,16 @@ public class Algorithms {
 
     }
 
+    public static int recursion(int number) {
+        if (number == 0) {
+            return 1;
+        }
+
+        return recursion(number - 1) *number;
+    }
+
+
+
     static void printArray(int[] array) {
         for (int j : array) {
             System.out.print(j + " ");
