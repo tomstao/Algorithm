@@ -5,6 +5,7 @@ public class Main {
         //Algorithms.selection(intArray);
         //Algorithms.insertionSort(intArray);
         //Algorithms.shellSort(intArray);
+        Algorithms.mergeSort(intArray, 0, intArray.length);
         Algorithms.printArray(intArray);
     }
 }

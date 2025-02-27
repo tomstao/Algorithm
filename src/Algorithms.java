@@ -80,7 +80,7 @@ public class Algorithms {
     }
 
     private static void merge(int[] input, int start, int mid, int end) {
-        if(input[mid - 1] > input[mid]){
+        if(end - start < 2){
             return;
         }
 
@@ -93,8 +93,8 @@ public class Algorithms {
         while (i < mid && j < end) {
             temp[tempIndex++] = input[i] <= input[j] ? input[i++] : input[j++];
         }
-
-
+        System.arraycopy(input, i, input, start + tempIndex, mid - i);
+        System.arraycopy(temp, 0, input, start, tempIndex);
     }
 
 
