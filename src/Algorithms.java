@@ -97,7 +97,42 @@ public class Algorithms {
         System.arraycopy(temp, 0, input, start, tempIndex);
     }
 
+    public static void quickSort(int[] input, int start, int end) {
+        if(end - start < 2){
+            return;
+        }
 
+        int pivotIndex = partition(input,start,end);
+        quickSort(input, start, pivotIndex);// left of the pivot element.
+        quickSort(input, pivotIndex + 1, end);// right of the pivot element.
+    }
+
+    private static int partition(int[] input, int start, int end) {
+        // Use the first element as the pivot.
+        int pivot = input[start];
+        int i = start;
+        int j = end;
+
+        while (i < j) {
+
+            // This is an empty loop for decrementing the j for the right.
+            while (i < j && input[--j] >= pivot);
+            if(i < j)
+            {
+                input[i] = input[j];
+            }
+
+            // Empty loop for incrementing i for the left
+            while (i < j && input[++i] <= pivot) ;
+
+            if (i < j) {
+                input[j] = input[i];
+            }
+        }
+        input[j] = pivot;
+
+        return j;
+    }
 
     static void printArray(int[] array) {
         for (int j : array) {
