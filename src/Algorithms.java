@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Algorithms {
     static public void selection(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
@@ -134,10 +136,37 @@ public class Algorithms {
         return j;
     }
 
+    static public void countingSort(int[] input, int min, int max) {
+
+        int[] countArray = new int[max - min + 1];
+
+        for (int i = 0; i < max - min + 1; i++) {
+            int index = input[i] - min;
+            countArray[index]++;
+        }
+        int currentIndex = 0;
+        for (int i = 0; i < countArray.length; i++) {
+            int num = min + i;
+            for(int j = 0; j < countArray[i]; j++){
+                input[currentIndex++] = num;
+            }
+        }
+    }
+
     static void printArray(int[] array) {
         for (int j : array) {
             System.out.print(j + " ");
         }
+    }
+
+    public static int[] generateRandomArray(int size, int bound) {
+        int[] array = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt(bound - 1) + 1;
+        }
+
+        return array;
     }
 
 }
