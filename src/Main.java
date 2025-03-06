@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 //        int[] intArray = Algorithms.generateRandomArray(10,10);
-        int[] intArray2 = Algorithms.generateRandomArray(10,5000, 1000);
+        int[] intArray2 = Algorithms.generateRandomArray(10,5000, 100);
         //Algorithms.selection(intArray);
         //Algorithms.insertionSort(intArray);
         //Algorithms.shellSort(intArray);
