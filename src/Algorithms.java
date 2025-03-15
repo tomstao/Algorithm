@@ -209,4 +209,19 @@ public class Algorithms {
         return array;
     }
 
+    public static void classInsertion(int[] arr) {
+        for(int i = 1; i < arr.length; i++){
+            int key = arr[i];
+            int j = 0;
+            while( key > arr[j]){
+                j++;
+            }
+
+            for(int k = i; k > j; k--){
+                arr[k] = arr[k-1];
+            }
+            arr[j] = key;
+        }
+    }
+
 }

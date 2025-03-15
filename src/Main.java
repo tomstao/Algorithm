@@ -12,9 +12,12 @@ public class Main {
 //        System.out.println();
 //        Algorithms.countingSort(intArray,1,10);
 //        Algorithms.printArray(intArray);
-        Algorithms.printArray(intArray2);
-        Algorithms.radixSort(intArray2,10,4);
-        System.out.println();
+        //Algorithms.printArray(intArray2);
+        //Algorithms.radixSort(intArray2,10,4);
+        //System.out.println();
+        //Algorithms.printArray(intArray2);
+
+        Algorithms.classInsertion(intArray2);
         Algorithms.printArray(intArray2);
 
     }
