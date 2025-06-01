@@ -42,6 +42,10 @@ public class SortTestArrayGenerator {
 //        System.out.println("Bubble sort completed in " + durationMs + " ms.");
 
         timePerformance("bubbleSort", testArray1);
+        System.out.println("Sorting completed--------------------------------");
+        timePerformance("insertionSort", testArray2);
+        System.out.println("Sorting completed--------------------------------");
+        timePerformance("mergesort", testArray3);
 //        timePerformance("insertionSort", testArray);
 //        timePerformance("mergeSort", testArray);
 
