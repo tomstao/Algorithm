@@ -31,7 +31,7 @@ public class Algorithms {
         }
 
         // Print sorted array
-        printArray(array);
+//        printArray(array);
     }
 
 
